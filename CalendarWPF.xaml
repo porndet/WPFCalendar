@@ -127,7 +127,7 @@
                             <Button x:Name="PART_PreviousButton" Grid.Column="0" Focusable="False" HorizontalAlignment="Left" Height="25" Grid.Row="0" Template="{StaticResource PreviousButtonTemplate}" Width="28"/>
                             <Button x:Name="PART_HeaderButton" Grid.Column="1" Focusable="False" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Grid.Row="0" Template="{StaticResource HeaderButtonTemplate}" VerticalAlignment="Center"/>
                             <Button x:Name="PART_NextButton" Grid.Column="2" Focusable="False" HorizontalAlignment="Right" Height="25" Grid.Row="0" Template="{StaticResource NextButtonTemplate}" Width="28"/>
-                            <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="#FF333333" Height="1"></Rectangle>
+                            <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="#4d6bf1" Height="2"></Rectangle>
                             <Grid x:Name="PART_MonthView" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="3" Grid.Row="2" Visibility="Visible">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="30"/>
@@ -383,7 +383,7 @@
                                     <VisualState x:Name="Active"/>
                                     <VisualState x:Name="Inactive">
                                         <Storyboard>
-                                            <ColorAnimation Duration="0" Storyboard.TargetName="NormalText" To="#FF777777" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
+                                            <ColorAnimation Duration="0" Storyboard.TargetName="NormalText" To="#d9d9d9" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
                                         </Storyboard>
                                     </VisualState>
                                 </VisualStateGroup>
