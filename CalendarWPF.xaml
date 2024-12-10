@@ -51,7 +51,7 @@
                                                 <VisualState x:Name="Normal"/>
                                                 <VisualState x:Name="MouseOver">
                                                     <Storyboard>
-                                                        <ColorAnimation Duration="0" Storyboard.TargetName="path" To="#FF73A9D8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"/>
+                                                        <ColorAnimation Duration="0" Storyboard.TargetName="path" To="#8d8f91" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"/>
                                                     </Storyboard>
                                                 </VisualState>
                                                 <VisualState x:Name="Disabled">
@@ -78,7 +78,7 @@
                                                 <VisualState x:Name="Normal"/>
                                                 <VisualState x:Name="MouseOver">
                                                     <Storyboard>
-                                                        <ColorAnimation Duration="0" Storyboard.TargetName="path" To="#FF73A9D8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"/>
+                                                        <ColorAnimation Duration="0" Storyboard.TargetName="path" To="#8d8f91" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"/>
                                                     </Storyboard>
                                                 </VisualState>
                                                 <VisualState x:Name="Disabled">
@@ -100,7 +100,7 @@
                                                 <VisualState x:Name="Normal"/>
                                                 <VisualState x:Name="MouseOver">
                                                     <Storyboard>
-                                                        <ColorAnimation Duration="0" Storyboard.TargetName="buttonContent" To="#FF73A9D8" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
+                                                        <ColorAnimation Duration="0" Storyboard.TargetName="buttonContent" To="#8d8f91" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
                                                     </Storyboard>
                                                 </VisualState>
                                                 <VisualState x:Name="Disabled">
@@ -148,17 +148,17 @@
                                     <RowDefinition Height="28"/>
                                 </Grid.RowDefinitions>
                             </Grid>
-                            <Grid x:Name="PART_YearView" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="6,-3,7,6" Grid.Row="2" Visibility="Hidden">
+                            <Grid x:Name="PART_YearView" Grid.ColumnSpan="3" HorizontalAlignment="Center" Grid.Row="2" Visibility="Hidden">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="45"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                             </Grid>
                         </Grid>
@@ -217,9 +217,6 @@
                                         <VisualTransition GeneratedDuration="0:0:0.1"/>
                                     </VisualStateGroup.Transitions>
                                     <VisualState x:Name="Normal">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" Storyboard.TargetName="NormalText" To="#FF333333" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
-                                        </Storyboard>
                                     </VisualState>
                                     <VisualState x:Name="MouseOver">
                                         <Storyboard>
@@ -236,7 +233,11 @@
                                     <VisualStateGroup.Transitions>
                                         <VisualTransition GeneratedDuration="0"/>
                                     </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Unselected"></VisualState>
+                                    <VisualState x:Name="Unselected">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" Storyboard.TargetName="NormalText" To="#FF333333" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
+                                        </Storyboard>
+                                    </VisualState>
                                     <VisualState x:Name="Selected">
                                         <Storyboard>
                                             <DoubleAnimation Duration="0" Storyboard.TargetName="SelectedBackground" To=".75" Storyboard.TargetProperty="Opacity"/>
@@ -248,12 +249,14 @@
                                     <VisualStateGroup.Transitions>
                                         <VisualTransition GeneratedDuration="0"/>
                                     </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Active"/>
+                                    <VisualState x:Name="Active"></VisualState>
+
                                     <VisualState x:Name="Inactive">
                                         <Storyboard>
                                             <ColorAnimation Duration="0" Storyboard.TargetName="NormalText" To="#FF333333" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)"/>
                                         </Storyboard>
                                     </VisualState>
+                                    
                                 </VisualStateGroup>
                                 <VisualStateGroup x:Name="CalendarButtonFocusStates">
                                     <VisualStateGroup.Transitions>
@@ -285,7 +288,7 @@
                             </VisualStateManager.VisualStateGroups>
                             <Rectangle x:Name="SelectedBackground" Fill="#4d6bf1" Opacity="0" RadiusX="4" RadiusY="4"/>
                             <Rectangle x:Name="Background" Fill="#4d6bf1" Opacity="0" RadiusX="4" RadiusY="4"/>
-                            <ContentPresenter x:Name="NormalText" TextElement.Foreground="White" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,0,1,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <ContentPresenter x:Name="NormalText" TextElement.Foreground="#FF333333" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,0,1,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                             <Rectangle x:Name="CalendarButtonFocusVisual" IsHitTestVisible="false" RadiusX="0" RadiusY="0" Stroke="Transparent" Visibility="Collapsed"/>
                         </Grid>
                         <ControlTemplate.Triggers>
